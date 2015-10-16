@@ -11,50 +11,77 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Manage
+Partial Public Class frmEditarTipoLugar
 
     '''<summary>
-    '''Control successMessage.
+    '''Control form1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents successMessage As Global.System.Web.UI.WebControls.PlaceHolder
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control setPassword.
+    '''Control rmEditartl.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents setPassword As Global.System.Web.UI.WebControls.PlaceHolder
+    Protected WithEvents rmEditartl As Global.Ext.Net.ResourceManager
 
     '''<summary>
-    '''Control password.
+    '''Control Panel1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents password As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Panel1 As Global.Ext.Net.Panel
 
     '''<summary>
-    '''Control confirmPassword.
+    '''Control FormPanel2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents confirmPassword As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents FormPanel2 As Global.Ext.Net.FormPanel
 
     '''<summary>
-    '''Control changePassword.
+    '''Control txtidlu_Tipo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents changePassword As Global.System.Web.UI.WebControls.PlaceHolder
+    Protected WithEvents txtidlu_Tipo As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control txtDetalle.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtDetalle As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control btnGuardar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnGuardar As Global.Ext.Net.Button
+
+    '''<summary>
+    '''Control btnCancelar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnCancelar As Global.Ext.Net.Button
 End Class

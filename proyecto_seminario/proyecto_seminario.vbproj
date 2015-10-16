@@ -255,6 +255,22 @@
     <Content Include="packages.config" />
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Paginas\Administracion\frmLogin.aspx" />
+    <Content Include="Paginas\Catalogos\frmCatalogoProveedor.aspx" />
+    <Content Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx" />
+    <Content Include="Paginas\Catalogos\frmEditarProveedor.aspx" />
+    <Content Include="Paginas\Catalogos\frmEditarTipoLugar.aspx" />
+    <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
+    <Content Include="Paginas\Catalogos\Scripts\jsCatalogos.js" />
+    <Content Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx" />
+    <Content Include="Paginas\Contabilidad\frmEditarCuentas.aspx" />
+    <Content Include="Paginas\Contabilidad\frmEditarPeriodo.aspx" />
+    <Content Include="Paginas\Contabilidad\frmEditarTipoCuenta.aspx" />
+    <Content Include="Paginas\Contabilidad\frmPeriodoContable.aspx" />
+    <Content Include="Paginas\Contabilidad\frmTipoCuenta.aspx" />
+    <Content Include="Paginas\Contabilidad\Scripts\jsCatalogoCuentas.js" />
+    <Content Include="Paginas\Contabilidad\Scripts\jsPeriodoContable.js" />
+    <Content Include="Paginas\Contabilidad\Scripts\jsTipoCuenta.js" />
     <Content Include="Paginas\PanelesInformacion\Dashboard.aspx" />
     <Content Include="pagina_principal.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -335,6 +351,13 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.vb">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Clases\clsBD.vb" />
+    <Compile Include="Clases\clsComunes.vb" />
+    <Compile Include="Clases\Catalogo\clsControladorProveedor.vb" />
+    <Compile Include="Clases\clsEncriptacion.vb" />
+    <Compile Include="Clases\Contabilidad\clsControladorCuentas.vb" />
+    <Compile Include="Clases\Contabilidad\clsControladorPeriodo.vb" />
+    <Compile Include="Clases\Contabilidad\clsControladorTipoCuenta.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -356,6 +379,83 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Paginas\Administracion\frmLogin.aspx.designer.vb">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\frmLogin.aspx.vb">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoProveedor.aspx.designer.vb">
+      <DependentUpon>frmCatalogoProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoProveedor.aspx.vb">
+      <DependentUpon>frmCatalogoProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx.designer.vb">
+      <DependentUpon>frmCatalogoTipoLugar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx.vb">
+      <DependentUpon>frmCatalogoTipoLugar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmEditarProveedor.aspx.designer.vb">
+      <DependentUpon>frmEditarProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmEditarProveedor.aspx.vb">
+      <DependentUpon>frmEditarProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmEditarTipoLugar.aspx.designer.vb">
+      <DependentUpon>frmEditarTipoLugar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmEditarTipoLugar.aspx.vb">
+      <DependentUpon>frmEditarTipoLugar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx.designer.vb">
+      <DependentUpon>frmCatalogoCuentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx.vb">
+      <DependentUpon>frmCatalogoCuentas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmEditarCuentas.aspx.designer.vb">
+      <DependentUpon>frmEditarCuentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmEditarCuentas.aspx.vb">
+      <DependentUpon>frmEditarCuentas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmEditarPeriodo.aspx.designer.vb">
+      <DependentUpon>frmEditarPeriodo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmEditarPeriodo.aspx.vb">
+      <DependentUpon>frmEditarPeriodo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmEditarTipoCuenta.aspx.designer.vb">
+      <DependentUpon>frmEditarTipoCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmEditarTipoCuenta.aspx.vb">
+      <DependentUpon>frmEditarTipoCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmPeriodoContable.aspx.designer.vb">
+      <DependentUpon>frmPeriodoContable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmPeriodoContable.aspx.vb">
+      <DependentUpon>frmPeriodoContable.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmTipoCuenta.aspx.designer.vb">
+      <DependentUpon>frmTipoCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmTipoCuenta.aspx.vb">
+      <DependentUpon>frmTipoCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\PanelesInformacion\Dashboard.aspx.designer.vb">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -418,6 +518,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="DS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="pagina_principal.aspx.vb" Inherits="proyecto_seminario.pagina_principal" %>
 
-
 <%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -9,7 +8,7 @@
 <head id="Head1" runat="server">
     <title>Proyecto Seminario Joyeria</title>
 
-    <link rel="stylesheet" type="text/css" href="Css/generales.css" />
+    <%--<link rel="stylesheet" type="text/css" href="Css/generales.css" />--%>
 
     <style type="text/css">
         .x-menu-body {
@@ -41,25 +40,21 @@
                                     <Content>
                                         <div>
                                             <asp:Image runat="server" ImageUrl="~/Images/logo.png" ID="Image1" ImageAlign="AbsMiddle" />
-                                            <%--<asp:Image runat="server" ImageUrl="~/Images/Gisystems Logo 100x23.jpg" ID="LogoGI" ImageAlign="AbsMiddle" />--%>
                                         </div>
                                     </Content>
                                 </ext:Panel>
                                 <ext:ToolbarFill />
-
-                                  <ext:Button ID="BtnSesionCnfg" runat="server" Icon="UserGray" Text="Sesión">
+                                <ext:Button ID="BtnSesionCnfg" runat="server" Icon="UserGray" Text="Sesión">
                                     <Menu>
                                         <ext:Menu ID="Menu1" runat="server">
                                             <Items>
-                                                <ext:MenuItem runat="server" ID="mnuPerfil" Text="Perfil" Icon="User"/>
+                                                <ext:MenuItem runat="server" ID="mnuPerfil" Text="Perfil" Icon="User" />
                                                 <ext:MenuItem runat="server" ID="mnuchangePass" Text="Cambiar Contraseña" Icon="UserKey">
                                                     <Listeners>
-                                                      <%--  <Click Handler="#{WindowCambioPassword}.show()" />--%>
                                                     </Listeners>
                                                 </ext:MenuItem>
                                                 <ext:MenuItem runat="server" ID="mnulogOut" Text="Salir del Sistema" Icon="UserGo">
                                                     <DirectEvents>
-                                                        <%--<Click OnEvent="SalirSistema"></Click>--%>
                                                     </DirectEvents>
                                                 </ext:MenuItem>
                                             </Items>
@@ -87,47 +82,115 @@
                     MinWidth="175" MaxWidth="400" MarginSpec="5 0 5 5"
                     Layout="AccordionLayout">
                     <Items>
-                        <ext:MenuPanel ID="mpCatalogos" runat="server"
+                        <ext:MenuPanel ID="mpCatalogos1" runat="server"
                             Title="Catalogos" Collapsed="true"
-                            Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
-                            <Menu ID="Menu3" runat="server">
+                            Icon="ApplicationDouble" AutoScroll="true" BodyPadding="5" Border="false">
+                            <Menu ID="Menu2" runat="server">
                                 <Items>
-                                    <ext:MenuItem ID="miProvevedores" runat="server" Text="Proveedores" Icon="BookEdit">
+                                     <ext:MenuItem ID="miTipoLugar" runat="server" Text="Tipo Lugar" Icon="BookEdit">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatProveedores.aspx','Catálogo Proveedores',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id11', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-                                    <ext:MenuItem ID="miClientes" runat="server" Text="Clientes" Icon="BookEdit">
+                                    <ext:MenuItem ID="miProveedores" runat="server" Text="Proveedores" Icon="BookEdit">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id2', 'Paginas/Catalogos/frmCatClientes.aspx','Catálogo Clientes',  this);" />
-                                        </Listeners>
-                                    </ext:MenuItem>
-
-
-                                    <ext:MenuItem ID="miContabilidad" runat="server" Text="Contabilidad" Icon="BookEdit">
-                                        <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id2', 'Paginas/Catalogos/frmCatContabilidad.aspx','Catálogo Contabilidad',  this);" />
-                                        </Listeners>
-                                    </ext:MenuItem>
-
-
-
-                                    <ext:MenuItem ID="miEmpleados" runat="server" Text="Empleados" Icon="BookEdit">
-                                        <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id3', 'Paginas/Catalogos/frmCatEmpleados.aspx', 'Catálogo Empleados', this);" />
-                                        </Listeners>
-                                    </ext:MenuItem>
-                                    <ext:MenuItem ID="miCatTiendas" runat="server" Text="Tiendas" Icon="BookEdit">
-                                        <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id4', 'Paginas/Catalogos/frmCatEmpleados.aspx','Catálogos Tiendas',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id12', 'Paginas/Catalogos/frmCatalogoProveedor.aspx','Catálogo Proveedor',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
-                              
                             </Menu>
                         </ext:MenuPanel>
-              
+                        <ext:MenuPanel ID="mpCompras2" runat="server"
+                            Title="Compras" Collapsed="true"
+                            Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
+                            <Menu ID="Menu3" runat="server">
+                                <Items>
+                                    <ext:MenuItem ID="MenuItem1" runat="server" Text="Tipo Lugar" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
+                            </Menu>
+                        </ext:MenuPanel>
+                        <ext:MenuPanel ID="mpVentas3" runat="server"
+                            Title="Venta" Collapsed="true"
+                            Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
+                            <Menu ID="Menu4" runat="server">
+                                <Items>
+                                    <ext:MenuItem ID="MenuItem2" runat="server" Text="Tipo Lugar" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
+                            </Menu>
+                        </ext:MenuPanel>
+
+                        <ext:MenuPanel ID="mpContabilidad4" runat="server"
+                            Title="Contabilidad" Collapsed="true"
+                            Icon="Bricks" AutoScroll="true" BodyPadding="5" Border="false">
+                            <Menu ID="Menu8" runat="server">
+
+                                 <Items>
+                                    <ext:MenuItem ID="menuConta43" runat="server" Text="Tipo de Cuenta" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id43', 'Paginas/Contabilidad/frmTipoCuenta.aspx','Tipo de Cuenta',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
+
+
+
+                                <Items>
+                                    <ext:MenuItem ID="menuConta41" runat="server" Text="Asiento" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id41', 'Paginas/Contabilidad/frmPeriodoContable.aspx','Asiento Contable',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
+
+                                <Items>
+                                    <ext:MenuItem ID="menuConta42" runat="server" Text="Cuentas" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id42', 'Paginas/Contabilidad/frmCatalogoCuentas.aspx','Cuentas Contables',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
+
+                            </Menu>
+                        </ext:MenuPanel>
+
+
+
+                        <ext:MenuPanel ID="mpsCliente5" runat="server"
+                            Title="Servicio al cliente" Collapsed="true"
+                            Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
+                            <Menu ID="Menu9" runat="server">
+                                <Items>
+                                    <ext:MenuItem ID="MenuItem7" runat="server" Text="Tipo Lugar" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
+                            </Menu>
+                        </ext:MenuPanel>
+                        <ext:MenuPanel ID="mpAdministracion6" runat="server"
+                            Title="Administrativo" Collapsed="true"
+                            Icon="BookKey" AutoScroll="true" BodyPadding="5" Border="false">
+                            <Menu ID="Menu10" runat="server">
+                                <Items>
+                                    <ext:MenuItem ID="MenuItem8" runat="server" Text="Usuarios" Icon="UserGrayCool">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Administracion Usuarios',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
+                            </Menu>
+                        </ext:MenuPanel>
                     </Items>
+
                 </ext:Panel>
             </Items>
         </ext:Viewport>
